@@ -198,8 +198,14 @@ app.get("/candidates", async (req, res) => {
 // =======================
 // 🏠 ROOT ROUTE (ضروري تكون قبل listen)
 // =======================
+// HEALTH CHECK (Railway كيعتمد عليها)
 app.get("/", (req, res) => {
-  res.status(200).send("OK");
+  res.status(200).json({ status: "ok" });
+});
+
+// optional (باش تتأكد)
+app.get("/health", (req, res) => {
+  res.status(200).send("healthy");
 });
 
 // =======================
