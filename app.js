@@ -193,15 +193,17 @@ app.get("/candidates", async (req, res) => {
   }
 });
 
+
+
 // =======================
-// 🏠 ROOT ROUTE (مهم بزاف)
+// 🏠 ROOT ROUTE (ضروري تكون قبل listen)
 // =======================
 app.get("/", (req, res) => {
-  res.send("API is running ✅");
+  res.status(200).send("OK");
 });
 
 // =======================
-// 🚀 START SERVER (خاص تكون آخر حاجة)
+// 🚀 START SERVER
 // =======================
 const PORT = process.env.PORT || 3000;
 
