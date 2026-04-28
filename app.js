@@ -9,7 +9,14 @@ const app = express();
 // =======================
 // ✅ MIDDLEWARE
 // =======================
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://voxerahire.com",
+    "https://www.voxerahire.com"
+  ],
+  methods: ["GET", "POST", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 app.use(express.json());
 
 // =======================
@@ -215,4 +222,5 @@ const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, "0.0.0.0", () => {
   console.log("Server running on port " + PORT);
+
 });
