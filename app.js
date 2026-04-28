@@ -12,7 +12,8 @@ const app = express();
 app.use(cors({
   origin: [
     "https://voxerahire.com",
-    "https://www.voxerahire.com"
+    "https://www.voxerahire.com",
+    "https://prismatic-sundae-f38028.netlify.app"
   ],
   methods: ["GET", "POST", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
