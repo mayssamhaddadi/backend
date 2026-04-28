@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -195,12 +194,17 @@ app.get("/candidates", async (req, res) => {
 });
 
 // =======================
-// 🚀 START SERVER
+// 🏠 ROOT ROUTE (مهم بزاف)
 // =======================
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log("Server running on port " + PORT);
-});
 app.get("/", (req, res) => {
   res.send("API is running ✅");
+});
+
+// =======================
+// 🚀 START SERVER (خاص تكون آخر حاجة)
+// =======================
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("Server running on port " + PORT);
 });
