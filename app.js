@@ -13,7 +13,8 @@ app.use(cors({
   origin: [
     "https://voxerahire.com",
     "https://www.voxerahire.com",
-    "https://prismatic-sundae-f38028.netlify.app"
+    "https://prismatic-sundae-f38028.netlify.app",
+    "https://frontend-tawny-tau-72.vercel.app" // ⬅️ مهم
   ],
   methods: ["GET", "POST", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
